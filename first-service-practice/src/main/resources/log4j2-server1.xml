@@ -1,0 +1,39 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration xmlns:xi="http://www.w3.org/2001/XInclude" packages="com.nexgrid.bongsoon">-->
+
+<!--    <Appenders>-->
+<!--        &lt;!&ndash; console appender which appends logs into standard output &ndash;&gt;-->
+<!--        <Console name="console" target="SYSTEM_OUT">-->
+<!--            <PatternLayout charset="UTF-8" pattern="%d %-5p [%t] [%X{client}] (%C{2}:%L) - %m%n" />-->
+<!--        </Console>-->
+
+<!--        &lt;!&ndash; file appender which appends logs into file &ndash;&gt;-->
+<!--        <RollingFile name="service-log" fileName="/logs/was/tomcat/first.001.log" filePattern="/logs/was/tomcat/first.001.%d{yyyy-MM-dd}.log" append="true">-->
+<!--            <PatternLayout pattern="%d %-5p [%t] [%X{client}] (%C{2}:%L) - %m%n" />-->
+<!--            <Policies>-->
+<!--                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>-->
+<!--            </Policies>-->
+<!--        </RollingFile>-->
+
+<!--        &lt;!&ndash; 통합OMS 용 설정 : 로그 파일명  &ndash;&gt;-->
+<!--        &lt;!&ndash; 로그파일 갱신주기는 기본값 10분이며, 클래스에 설정되어 있음       &ndash;&gt;-->
+<!--        <OmsFileAppender name="OmsFileAppender" directory="/logs/was/tomcat/tot"  prefix="first" rollingTerms="5"-->
+<!--                  datePattern="'.'yyyyMMddHHmm" folderPattern="yyyyMMdd" server_num="001">-->
+<!--            <PatternLayout pattern="%m%n" />-->
+<!--        </OmsFileAppender>-->
+
+<!--    </Appenders>-->
+
+<!--    &lt;!&ndash; Logger &ndash;&gt;-->
+<!--    <Loggers>-->
+<!--        <Logger name="OMS_LOGGER" additivity="false" level="debug">-->
+<!--            <AppenderRef ref="OmsFileAppender"/>-->
+<!--        </Logger>-->
+
+<!--        &lt;!&ndash;root.&ndash;&gt;-->
+<!--        <Root level="info">-->
+<!--            <AppenderRef ref="service-log"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+
+<!--</Configuration>-->

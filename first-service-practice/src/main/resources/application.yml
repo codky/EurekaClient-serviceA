@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: first-service-practice
+#  zipkin:
+#    base-url: http://192.168.10.5:9411
+#    enabled: true
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#  main:
+#    allow-circular-references: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka # Eureka Server 명시
+
+
